@@ -10,8 +10,6 @@
     h2 {
         @apply text-xl;
         @apply font-medium;
-        @apply mt-2;
-        @apply mb-1;
     }
 
     h3 {
@@ -22,9 +20,7 @@
     }
 
     li {
-        @apply text-base;
-        @apply mt-1;
-        @apply ml-2;
+        @apply text-lg;
     }
 
     p {
@@ -32,6 +28,15 @@
         @apply mt-1;
         @apply ml-2;
     }
+
+    .bird {
+        @apply w-[16rem];
+        @apply bg-slate-200;
+        @apply p-4;
+        @apply pr-0;
+        @apply mb-[3rem];
+    }
 }
+
 @tailwind components;
 @tailwind utilities;
