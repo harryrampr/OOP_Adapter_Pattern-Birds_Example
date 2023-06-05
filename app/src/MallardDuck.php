@@ -3,16 +3,30 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Class MallardDuck
+ *
+ * Represents a MallardDuck which implements the Duck interface.
+ */
 class MallardDuck implements Duck
 {
-
-    public function quack(): void
+    /**
+     * Make the MallardDuck quack.
+     *
+     * @return string
+     */
+    public function quack(): string
     {
-        echo '<li>Quack', PHP_EOL;
+        return '<li>Quack</li>' . PHP_EOL;
     }
 
-    public function fly(): void
+    /**
+     * Make the MallardDuck fly.
+     *
+     * @return string
+     */
+    public function fly(): string
     {
-        echo '<li>I am flying', PHP_EOL;
+        return '<li>I am flying</li>' . PHP_EOL;
     }
 }

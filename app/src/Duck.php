@@ -3,9 +3,22 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Represents a Duck interface.
+ */
 interface Duck
 {
-    public function quack(): void;
+    /**
+     * Make the duck quack.
+     *
+     * @return string
+     */
+    public function quack(): string;
 
-    public function fly(): void;
+    /**
+     * Make the duck fly.
+     *
+     * @return string
+     */
+    public function fly(): string;
 }

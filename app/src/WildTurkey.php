@@ -2,16 +2,30 @@
 
 namespace App;
 
+/**
+ * Class WildTurkey
+ *
+ * Represents a WildTurkey which implements the Turkey interface.
+ */
 class WildTurkey implements Turkey
 {
-
-    public function gobble(): void
+    /**
+     * Make the WildTurkey gobble.
+     *
+     * @return string
+     */
+    public function gobble(): string
     {
-        echo '<li>Gobble gobble', PHP_EOL;
+        return '<li>Gobble gobble</li>' . PHP_EOL;
     }
 
-    public function fly(): void
+    /**
+     * Make the WildTurkey fly a short distance.
+     *
+     * @return string
+     */
+    public function fly(): string
     {
-        echo '<li>I am flying a short distance', PHP_EOL;
+        return '<li>I am flying a short distance</li>' . PHP_EOL;
     }
 }

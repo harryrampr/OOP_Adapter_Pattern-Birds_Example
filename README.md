@@ -4,7 +4,13 @@ We are sharing some simple PHP code, showing the use of
 the [Adapter Pattern](https://en.wikipedia.org/wiki/Adapter_pattern). You will see how modern versions
 of PHP, supporting Classes and Interfaces, make it easy to implement the Adapter Pattern using this language.
 
-### About It
+You can find the PHP 8.1 code
+at [/app/src](https://github.com/harryrampr/OOP_Adapter_Pattern-Birds_Example/tree/master/app/src), there is testing
+at [/tests](https://github.com/harryrampr/OOP_Adapter_Pattern-Birds_Example/tree/master/app/tests) directory. HTML
+output with Tailwind CSS can be found
+at [/app/public](https://github.com/harryrampr/OOP_Adapter_Pattern-Birds_Example/tree/master/app/public) directory.
+
+### About the Pattern
 
 The Adapter pattern is a structural design pattern
 in [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) that allows incompatible

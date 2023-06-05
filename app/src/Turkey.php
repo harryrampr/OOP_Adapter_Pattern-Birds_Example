@@ -3,9 +3,22 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * Represents a Turkey interface.
+ */
 interface Turkey
 {
-    public function gobble(): void;
+    /**
+     * Make the turkey gobble.
+     *
+     * @return string
+     */
+    public function gobble(): string;
 
-    public function fly(): void;
+    /**
+     * Make the turkey fly a short distance.
+     *
+     * @return string
+     */
+    public function fly(): string;
 }

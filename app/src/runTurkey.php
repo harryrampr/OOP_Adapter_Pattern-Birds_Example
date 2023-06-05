@@ -8,26 +8,50 @@ use App\MallardDuck;
 use App\TurkeyAdapter;
 use App\WildTurkey;
 
+/**
+ * Display the title of the Bird Adapter Simulation.
+ */
+echo '<h1>Bird Adapter Simulation</h1>';
+
 $duck = new MallardDuck();
-
 $turkey = new WildTurkey();
-$turkeyAdapter = new TurkeyAdapter;
+$turkeyAdapter = new TurkeyAdapter();
 
-echo "<div class=\"bird\">\n<h2>The turkey says:</h2>\n<ul>", PHP_EOL;
-$turkey->gobble();
-$turkey->fly();
+// Show turkey behavior
+echo displayBirdSays('The turkey says:');
+echo $turkey->gobble();
+echo $turkey->fly();
 echo "</ul>\n</div>", PHP_EOL;
 
-echo "<div class=\"bird\">\n<h2>The duck says:</h2>\n<ul>", PHP_EOL;
-testDuck($duck);
-echo "</ul>\n</div>", PHP_EOL;
+// Show duck behavior
+echo displayBirdSays('The duck says:');
+echo testDuck($duck);
 
-echo "<div class=\"bird\">\n<h2>The turkey adapter says:</h2>\n<ul>", PHP_EOL;
-testDuck($turkeyAdapter);
-echo "</ul>\n</div>", PHP_EOL;
+// Show turkey adapter behavior
+echo displayBirdSays('The turkey adapter says:');
+echo testDuck($turkeyAdapter);
 
-function testDuck(Duck $duck): void
+/**
+ * Test the behavior of a Duck object.
+ *
+ * @param Duck $duck The Duck object to test.
+ * @return string The output representing the behavior of the Duck.
+ */
+function testDuck(Duck $duck): string
 {
-    $duck->quack();
-    $duck->fly();
+    $output = $duck->quack();
+    $output .= $duck->fly();
+    $output .= "</ul>\n</div>" . PHP_EOL;
+    return $output;
+}
+
+/**
+ * Display the title for a bird's behavior.
+ *
+ * @param string $text The title of the bird's behavior.
+ * @return string The HTML string representing title.
+ */
+function displayBirdSays(string $text): string
+{
+    return "<div class=\"bird\">\n<h2>{$text}</h2>\n<ul>" . PHP_EOL;
 }
